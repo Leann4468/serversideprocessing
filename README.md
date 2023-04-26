@@ -116,10 +116,23 @@ def rectarea(request):
         print('Area=',area)
     return render(request,'myapp/math.html',context)
 ```
+```python
+urls.py
+
+from django.contrib import admin
+from django.urls import path
+from myapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
+    path('',views.rectarea,name="areaofrectangleroot")
+]
+```
 ## OUTPUT:
 
 ### Home Page:
+![Screenshot (2)](https://user-images.githubusercontent.com/121165979/234474199-4d0d55a5-3921-4840-be32-aa73b5541c3c.png)
 
 
 ## Result:
-
+The program for implementing server side processing is completed successfully.
