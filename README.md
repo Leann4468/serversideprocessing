@@ -24,10 +24,10 @@ Create a HTML file of forms.
 Publish the website in the given URL.
 
 ## PROGRAM :
-```python
+
 
 math.html
-
+```python
 <html>
 <head>
 <meta charset='utf-8'>
@@ -93,9 +93,9 @@ Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/
 </html>
 ```
 
-```python
-views.py
 
+views.py
+```python
 from django.shortcuts import render
 def rectarea(request):
     context={}
@@ -116,9 +116,9 @@ def rectarea(request):
         print('Area=',area)
     return render(request,'myapp/math.html',context)
 ```
-```python
-urls.py
 
+urls.py
+```python
 from django.contrib import admin
 from django.urls import path
 from myapp import views
@@ -132,6 +132,9 @@ urlpatterns = [
 
 ### Home Page:
 ![Screenshot (2)](https://user-images.githubusercontent.com/121165979/234474199-4d0d55a5-3921-4840-be32-aa73b5541c3c.png)
+
+### Server Output:
+![server out](https://github.com/Leann4468/serversideprocessing/assets/121165979/a44c913c-fc19-4e66-93c4-73c3258e9ce3)
 
 
 ## Result:
